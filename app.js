@@ -3,7 +3,7 @@ var bodyParser = require('body-parser');
 var path = require('path');
 var expressValidator = require('express-validator');
 var mongojs = require('mongojs');
-var db = mongojs('dummy', ['users']);
+var db = mongojs('nodeproject', ['users']);
 var ObjectId = mongojs.ObjectId;
 var app = express();
 
