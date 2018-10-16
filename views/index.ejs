@@ -1,0 +1,13 @@
+<% include partials/header %>
+<h1><%= title %></h1>
+	<ul>
+		<% users.forEach(function(user){ %>
+		<li><%= user.name %> - 
+		<a href ="/manage/users?userid=<%= user._id %>">Edit</a>
+		&nbsp;&nbsp;&nbsp;<a href ="#" class="deleteuser" 
+		data-id="<%= user._id %>">Delete</a></li>
+		<% }) %>
+	</ul>
+	</br></br>
+	<a href="/manage/users"> Add Customers </a>
+<% include partials/footer %>

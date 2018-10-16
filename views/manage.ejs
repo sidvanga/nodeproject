@@ -1,0 +1,27 @@
+<% include partials/header %>
+	<h1>Manage Customers</h1>
+	<% if(errors) { %>
+		<ul>
+			<% errors.forEach(function(error){ %>
+			<li><%= error.msg %></li>
+			<% }) %>
+		</ul>	
+	<% } %>
+	<form method="post" action="/manage/users">
+	<label>Name:</label>
+	<input type="text" name="name" value="<%= userdata.name %>">
+	</br></br></br>
+	<label>Mobile:</label>
+	<input type="text" name="mobile" value="<%= userdata.mobile %>">
+	</br></br></br>
+	<label>Email:</label>
+	<input type="text" name="email" value="<%= userdata.email %>">
+	</br></br></br></br></br>
+	<input type="hidden" name="userid" value="<%= userdata._id %>">
+
+	<input type="submit" value="Submit">
+	</form>
+</br></br></br></br>
+<a href="/"> Customer List </a>
+
+<% include partials/footer %>
